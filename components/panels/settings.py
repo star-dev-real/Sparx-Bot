@@ -203,8 +203,8 @@ class SettingsPanel(ctk.CTkFrame):
         """Send verification code to email"""
         try:
             # Configure email settings
-            sender_email = "email170512@gmail.com"  
-            sender_password = "kyqp liff txot nesu"  
+            sender_email = ""  
+            sender_password = ""  
             
             msg = EmailMessage()
             msg['Subject'] = "Your Verification Code"
